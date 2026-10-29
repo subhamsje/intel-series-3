@@ -50,7 +50,7 @@ export function PersistentDock({
                 type="button"
                 onClick={() => onSelectScene?.(item.id)}
                 aria-current={isActive ? 'step' : undefined}
-                className={`relative px-3.5 py-1 rounded-full text-[11px] font-sans tracking-tight whitespace-nowrap transition-colors duration-200 ${
+                className={`relative px-3.5 py-1 rounded-full text-[11px] font-sans tracking-tight whitespace-nowrap transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#0071C5] ${
                   isActive
                     ? 'text-white font-medium'
                     : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
