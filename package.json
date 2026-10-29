@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "GITHUB_ACTIONS=true next build",
+    "test:visual": "node scripts/capture.cjs",
+    "test:interaction": "node scripts/test-scene5-interaction.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
