@@ -26,7 +26,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#050608] text-[#F8FAFC]">
+    <main className="relative min-h-screen bg-[#03060D] text-[#FCFFFF]">
       {/* CONTINUOUS CINEMATIC SEQUENCE: SCENES 1, 2, AND 3 */}
       <CinematicNarrativeExperience onSceneChange={setActiveScene} />
 
