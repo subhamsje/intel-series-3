@@ -48,8 +48,8 @@ async function testInteractions() {
     });
 
     // Scroll to Scene 5
-    await send('Runtime.evaluate', { expression: 'window.scrollTo(0, 3600)' });
-    await send('Runtime.evaluate', { expression: 'new Promise(r => setTimeout(r, 1200))', awaitPromise: true });
+    await send('Runtime.evaluate', { expression: 'window.scrollTo({ top: 3650, behavior: "instant" })' });
+    await send('Runtime.evaluate', { expression: 'new Promise(r => setTimeout(r, 1600))', awaitPromise: true });
 
     // 1. Click "Demanding Creation & 3D" (Ultra Priority)
     await send('Runtime.evaluate', {
