@@ -5,10 +5,12 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #050608;
-  --text-primary: #F8FAFC;
+  --bg-primary: #050814;
+  --text-primary: #FCFFFF;
   --text-secondary: #94A3B8;
-  --intel-blue: #0068B5;
+  --intel-sky: #0593C6;
+  --intel-pink: #D83995;
+  --intel-white: #FCFFFF;
 }
 
 * {
@@ -25,25 +27,37 @@ html, body {
 }
 
 ::selection {
-  background: #0068B5;
-  color: #FFFFFF;
+  background: #D83995;
+  color: #FCFFFF;
 }
 
-/* Subtle, cinematic grain overlay (pure CSS, zero network latency) */
+/* Translucent frosted glass styling with subtle inner light */
+.glass-panel-sky {
+  background: linear-gradient(135deg, rgba(5, 147, 198, 0.16) 0%, rgba(6, 15, 32, 0.75) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(5, 147, 198, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(252, 255, 255, 0.2);
+}
+
+.glass-panel-pink {
+  background: linear-gradient(135deg, rgba(216, 57, 149, 0.16) 0%, rgba(32, 8, 24, 0.75) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(216, 57, 149, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(252, 255, 255, 0.2);
+}
+
+.glass-panel-neutral {
+  background: linear-gradient(135deg, rgba(252, 255, 255, 0.08) 0%, rgba(10, 16, 32, 0.75) 100%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(252, 255, 255, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(252, 255, 255, 0.25);
+}
+
+/* Refined organic grain overlay */
 .stage-noise {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
-  background-size: 24px 24px;
-}
-
-/* Restrained hairline borders */
-.hairline-border {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.hairline-border-b {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.hairline-border-t {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-image: radial-gradient(rgba(252, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 20px 20px;
 }
