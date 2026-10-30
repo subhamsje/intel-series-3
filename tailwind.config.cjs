@@ -14,18 +14,22 @@ module.exports = {
         display: ['Inter', '-apple-system', 'sans-serif'],
       },
       colors: {
-        obsidian: {
-          950: '#040507',
-          900: '#06070a',
-          850: '#0a0d14',
-          800: '#0f1420',
-          700: '#182030',
-        },
+        // Primary Redesign Palette (Reference Colors)
         intel: {
-          blue: '#0068B5',
-          azure: '#0071C5',
-          ice: '#E2F1FD',
-          muted: '#8AA6C1',
+          sky: '#0593C6',       // Electric Sky Blue (Reference)
+          pink: '#D83995',      // Vivid Hot Pink (Reference)
+          white: '#FCFFFF',     // Clean Bright White (Reference)
+          azure: '#0071C5',     // Classic Intel Azure
+          ice: '#E0F2FE',       // Sky Blue tint
+          rose: '#FCE7F3',      // Hot Pink tint
+        },
+        // Atmospheric deep twilight neutrals for optimal contrast & luminescence
+        twilight: {
+          950: '#03060C',
+          900: '#060B16',
+          850: '#0A1122',
+          800: '#0E172E',
+          700: '#162344',
         },
       },
       letterSpacing: {
@@ -33,6 +37,9 @@ module.exports = {
         tight: '-0.02em',
         wide: '0.04em',
         widest: '0.12em',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
